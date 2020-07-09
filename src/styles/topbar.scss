@@ -1,0 +1,38 @@
+.topbar {
+  &-title {
+    flex-grow: 1;
+    font-size: 0.6rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &-lang-btn {
+    padding: 6px !important;
+    margin-left: 10px !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    font-size: 0.6rem !important;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
+
+.lang-switch {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+
+  &-btn {
+    margin-right: 6px !important;
+  }
+
+  &-lang {
+    text-transform: uppercase;
+
+    span {
+      font-size: 0.6rem;
+      font-weight: bold;
+    }
+  }
+}

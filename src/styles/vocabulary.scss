@@ -1,0 +1,48 @@
+.vocabulary-item {
+  padding: 10px 0;
+  display: flex;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  
+  &-content {
+    flex-grow: 1;
+  }
+
+  &-langs {
+    flex-grow: 1;
+    display: flex;
+    padding-bottom: 5px;
+    font-weight: 900;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.4);
+
+    &-icon {
+      width: 12px !important;
+      height: 12px !important;
+      margin: 0 5px;
+      margin-top: -2px;
+    }
+  }
+
+  &-from {
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  &-to {
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  &-date {
+    padding-top: 10px;
+    font-weight: 900;
+    font-size: 8px;
+    color: rgba(0,0,0,0.4);
+  }
+
+  &-delete {
+    color: rgba(0, 0, 0, 0.2) !important;
+  }
+}

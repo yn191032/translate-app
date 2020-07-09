@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { IconButton, Typography, Menu, MenuItem } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
-import useStyles from './styles';
-
 const options = [
   'en',
   'pl',
@@ -13,7 +11,6 @@ const options = [
 ];
 
 const LangSwitchControl = () => {
-  const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(1);
 
@@ -39,13 +36,12 @@ const LangSwitchControl = () => {
         aria-controls="lang-menu" 
         aria-haspopup="true"
         onClick={handleClickListItem}
-        className='lang-switch-button'
+        className='lang-switch-lang'
       >
-        <Typography variant="inherit" className={classes.typography}>
-          {options[selectedIndex]}
-        </Typography>
+        <span>{ options[selectedIndex] }</span>
         <KeyboardArrowDownIcon fontSize='small'/>
       </IconButton>
+
       <Menu
         id="lang-menu"
         anchorEl={anchorEl}

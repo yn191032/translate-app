@@ -8,7 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import App from './components/App';
 import { SidebarContextProvider } from './components/Sidebar/context';
 
-import './index.scss';
+import './styles/index.scss';
 
 const theme = createMuiTheme({
   palette: {

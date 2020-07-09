@@ -5,13 +5,13 @@ const VocabularyList = () => {
   return (
     <>
       <div className='list-header'>4 cards was found</div>
-      <div className='vocabulary-list'>
-        <VocabularyItem from='complementary' to='translation'/>
-        <VocabularyItem from='function' to='translation'/>
-        <VocabularyItem from='theme' to='translation'/>
-        <VocabularyItem from='spacing' to='translation'/>
-      </div>
-      <div className='bottom'>End</div>
+      <ul className='list'>
+        <li className='list-item'><VocabularyItem from='complementary' to='translation'/></li>
+        <li className='list-item'><VocabularyItem from='function' to='translation'/></li>
+        <li className='list-item'><VocabularyItem from='theme' to='translation'/></li>
+        <li className='list-item'><VocabularyItem from='spacing' to='translation'/></li>
+      </ul>
+      <div className='list-bottom'>End</div>
     </>
   );
 };

@@ -1,0 +1,59 @@
+body {
+  background-color: #eee;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  font-family : inherit;
+  font-size: 1em;
+}
+
+a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+@import './bottomnav.scss';
+@import './card.scss';
+@import './list.scss';
+@import './profile.scss';
+@import './search.scss';
+@import './sidebar.scss';
+@import './topbar.scss';
+@import './vocabulary.scss';
+
+// Container
+
+.container {
+  padding-top: 16px;
+  padding-bottom: 56px;
+}
+
+// List
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+  }
+}
+
+// Form
+
+.form-top-text {
+  margin-bottom: 0;
+}

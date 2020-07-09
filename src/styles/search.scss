@@ -1,0 +1,14 @@
+.searchbar {
+  display: flex;
+  border-radius: 0 !important;
+  padding: 0 14px;
+
+  input {
+    flex: 1;
+    padding: 20px 0;
+  }
+
+  &-autocomplete {
+    flex: 1;
+  }
+}

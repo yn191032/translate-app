@@ -1,7 +1,7 @@
 import  React from 'react';
 import Header from '../components/Header';
 import Container from '@material-ui/core/Container';
-import { Avatar, Chip, Divider, TextField, Paper, Button, FormControl } from '@material-ui/core';
+import { Avatar, Chip, Divider, TextField, Button, FormControl } from '@material-ui/core';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import StarIcon from '@material-ui/icons/Star';
 

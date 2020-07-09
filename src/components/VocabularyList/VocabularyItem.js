@@ -1,7 +1,8 @@
 import React from 'react';
 
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import IconButton from '@material-ui/core/IconButton';
+
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 
 const VocabularyItem = ({ from, to }) => {

@@ -1,11 +1,12 @@
 import React from 'react';
 
-import { Paper, InputBase, IconButton, Toolbar, LinearProgress, Button, ButtonGroup, Divider } from '@material-ui/core';
-import SearchIcon from '@material-ui/icons/Search';
+import Paper from '@material-ui/core/Paper';
+import InputBase from '@material-ui/core/InputBase';
+import IconButton from '@material-ui/core/IconButton';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
-import LangSwitch from './LangSwitch';
-import LangButton from './LangButton';
+import SearchIcon from '@material-ui/icons/Search';
 
 const top100Films = [
   { title: 'The Shawshank Redemption', year: 1994 },
@@ -114,13 +115,6 @@ const Search = () => {
   
   return (
     <>
-      {/* <Toolbar className='lang-switch'>
-        <LangSwitch />
-        <LangButton lang='en'/>
-        <LangButton lang='ru'/>
-        <LangButton lang='pl'/>
-      </Toolbar> */}
-
       <Paper elevation={3} component='form' className='searchbar'>
         <Autocomplete
           freeSolo
@@ -128,24 +122,20 @@ const Search = () => {
           className='searchbar-autocomplete'
           options={top100Films}
           getOptionLabel={(option) => option.title}
-          renderInput={(params) => <div ref={params.InputProps.ref}>
+          renderInput={(params) => 
+          <div ref={params.InputProps.ref}>
             <InputBase  {...params.inputProps}
               fullWidth
               placeholder='type something'
-          /></div>}
-        />
+            />
+          </div>
+          } />
         
-        <ButtonGroup size='small' className='lang-btn-group' edge='end' color='primary' variant="text">
-          <Button>en</Button>
-          <Button>pl</Button>
-          <Button>by</Button>
-        </ButtonGroup>
-        <Divider orientation="vertical" flexItem />
         <IconButton color='primary' type='submit' aria-label='search' edge='end'>
           <SearchIcon />
         </IconButton>
       </Paper>
-      <LinearProgress />
+      {/* <LinearProgress /> */}
     </>
   );
 };

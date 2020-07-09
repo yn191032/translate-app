@@ -1,0 +1,14 @@
+.profile {
+  display: flex;
+  margin-bottom: 20px;
+
+  &-data {
+    margin-left: 10px;
+  }
+
+  &-name {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+}

@@ -5,12 +5,14 @@ const CardList = () => {
   return (
     <>
       <div className='list-header'>4 cards was found</div>
-      <Card saved={true}/>
-      <Card loading={true}/>
-      <Card saved={true} loading={true}/>
-      <Card/>
-      <Card/>
-      <div className='bottom'>end</div>
+      <ul className='list'>
+        <li className='list-item'><Card saved={true}/></li>
+        <li className='list-item'><Card loading={true}/></li>
+        <li className='list-item'><Card saved={true} loading={true}/></li>
+        <li className='list-item'><Card/></li>
+        <li className='list-item'><Card/></li>
+      </ul>
+      <div className='list-bottom'>end</div>
     </>
   );
 };

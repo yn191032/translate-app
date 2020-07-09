@@ -1,20 +1,16 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Sidebar from '../Sidebar';
+import BottomNav from '../BottomNav';
 
 import Home from '../../pages/Home';
 import Vocabulary from '../../pages/Vocabulary';
 import Signup from '../../pages/Signup';
 import Login from '../../pages/Login';
 import Profile from '../../pages/Profile';
-import { BottomNavigation, BottomNavigationAction } from '@material-ui/core';
-import TranslateIcon from '@material-ui/icons/Translate';
-import ListAltIcon from '@material-ui/icons/ListAlt';
-import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled';
-import BottomNav from '../BottomNav';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <Sidebar />

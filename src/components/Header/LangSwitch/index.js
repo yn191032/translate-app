@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { IconButton } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
 import CompareArrowsIcon from '@material-ui/icons/CompareArrows';
 
 import LangSwitchControl from './LangSwitchControl';
