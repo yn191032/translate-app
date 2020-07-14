@@ -1,30 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-
 import * as serviceWorker from './serviceWorker';
 
 import App from './components/App';
-import { SidebarContextProvider } from './components/Sidebar/context';
+import Theme from './components/App/theme';
+
+import SidebarState from './components/Sidebar/state';
+import AlertState from './components/Alert/state';
 
 import './styles/index.scss';
 
-const theme = createMuiTheme({
-  palette: {
-    secondary: {
-      main: '#F99E49',
-    },
-  },
-});
-
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <SidebarContextProvider>
-        <App />
-      </SidebarContextProvider>
-    </ThemeProvider>
+    <Theme>
+      <AlertState>
+        <SidebarState>
+          <App />
+        </SidebarState>
+      </AlertState>
+    </Theme>
   </React.StrictMode>,
   document.getElementById('root')
 );

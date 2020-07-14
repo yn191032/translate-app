@@ -8,7 +8,7 @@ import Chip from '@material-ui/core/Chip';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import StarIcon from '@material-ui/icons/Star';
 
-import { SidebarContext } from './context';
+import SidebarContext from './context';
 
 const Sidebar = () => {
   const { menu, toggleMenu } = useContext(SidebarContext);

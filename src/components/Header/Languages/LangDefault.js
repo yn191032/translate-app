@@ -1,26 +1,19 @@
 import React, { useState } from 'react';
 
-import { IconButton, Typography, Menu, MenuItem } from '@material-ui/core';
+import { IconButton, Menu, MenuItem } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
-const options = [
-  'en',
-  'pl',
-  'ru',
-  'by',
-];
 
-const LangSwitchControl = () => {
+const LangDefault = ({ onSet, value, options }) => {
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedIndex, setSelectedIndex] = useState(1);
 
   const handleClickListItem = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuItemClick = (event, index) => {
-    setSelectedIndex(index);
+  const handleMenuItemClick = (value) => (event) => {
     setAnchorEl(null);
+    onSet(value)
   };
 
   const handleClose = () => {
@@ -30,15 +23,15 @@ const LangSwitchControl = () => {
   return (
     <>
       <IconButton 
+        className='lang-switch-lang'
         variant="outlined"
         size='small' 
         color="inherit"
         aria-controls="lang-menu" 
         aria-haspopup="true"
         onClick={handleClickListItem}
-        className='lang-switch-lang'
       >
-        <span>{ options[selectedIndex] }</span>
+        { value }
         <KeyboardArrowDownIcon fontSize='small'/>
       </IconButton>
 
@@ -49,13 +42,12 @@ const LangSwitchControl = () => {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        {options.map((option, index) => (
+        {options.map((option) => (
           <MenuItem
-            key={option}
-            selected={index === selectedIndex}
-            onClick={(event) => handleMenuItemClick(event, index)}
+            key={option.value}
+            onClick={handleMenuItemClick(option.value)}
           >
-            {option}
+            {option.label}
           </MenuItem>
         ))}
       </Menu>
@@ -63,4 +55,4 @@ const LangSwitchControl = () => {
   );
 };
 
-export default LangSwitchControl;
+export default LangDefault;

@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Sidebar from '../Sidebar';
 import BottomNav from '../BottomNav';
+import Alert from '../Alert';
 
 import Home from '../../pages/Home';
 import Vocabulary from '../../pages/Vocabulary';
@@ -13,13 +14,14 @@ import Profile from '../../pages/Profile';
 const App = () => {
   return (
     <BrowserRouter>
-      <Sidebar />
+      <Sidebar/>
+      <Alert/>
       <Route exact path='/' component={Home}/>
       <Route exact path='/vocabulary' component={Vocabulary}/>
       <Route exact path='/signup' component={Signup}/>
       <Route exact path='/login' component={Login}/>
       <Route exact path='/profile' component={Profile}/>
-      <BottomNav />
+      <BottomNav/>
     </BrowserRouter>
   );
 }

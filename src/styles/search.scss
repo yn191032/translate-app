@@ -1,5 +1,6 @@
 .searchbar {
   display: flex;
+  position:relative;
   border-radius: 0 !important;
   padding: 0 14px;
 
@@ -9,6 +10,13 @@
   }
 
   &-autocomplete {
-    flex: 1;
+    position: absolute !important;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 999;
+    background-color: white;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   }
 }

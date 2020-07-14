@@ -8,15 +8,15 @@ import StarIcon from '@material-ui/icons/Star';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
 
-const Card = ({ saved = false, loading = false }) => {
+const Card = ({ saved = false, loading = false, card }) => {
   return (
     <MUICart className={saved ? 'card saved' : 'card'}>
       <CardActionArea>
         <div className='card-header'>
           <div className='card-header-langs'>
-            <div>EN</div>
+            <div>{ card.lang.from }</div>
             <ChevronRightIcon className='card-header-langs-icon'/> 
-            <div>pl</div>
+            <div>{ card.lang.to }</div>
           </div>
           <div className='card-header-status'>
             <div className='card-header-status-text'>{ loading ? 'Loading...' : saved ? 'Saved' : 'Tap to save' }</div>
@@ -25,15 +25,15 @@ const Card = ({ saved = false, loading = false }) => {
         </div>
 
         <div className='card-from'>
-          <h3 className='card-from-word'>translation</h3>
-          <p className='card-from-example'>Lorem ipsum dolor sit amet, consectuer adipiscing elit. </p>
+          <h3 className='card-from-word'>{ card.to.word }</h3>
+          <p className='card-from-example'>{ card.from.example }</p>
         </div>
 
         <div className='card-to'>
           <SubdirectoryArrowRightIcon fontSize='small'/>
           <div className='card-to-wrapper'>
-            <h3 className='card-to-word'>Lorem</h3>
-            <p className='card-to-example'>Lorem ipsum dolor sit amet, consectuer adipiscing elit. </p>
+            <h3 className='card-to-word'>{ card.from.word }</h3>
+            <p className='card-to-example'>{ card.to.example }</p>
           </div>
         </div>
       </CardActionArea>
