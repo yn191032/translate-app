@@ -11,7 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 import List from '@material-ui/core/List';
 
-import { useSearchContext } from '../../context/SearchContext';
+import { useSearchContext } from '../../contexts/SearchContext';
 
 const Suggest = ({ isVisible, suggestions, setValue }) => {
   if (!isVisible || suggestions.length === 0) {

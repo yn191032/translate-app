@@ -6,19 +6,22 @@ import Search from '../components/Search';
 import Header from '../components/Header';
 import CardList from '../components/CardList';
 
-import { LanguageProvider } from '../context/LanguageContext';
-import { SearchProvider } from '../context/SearchContext';
+import { LanguageProvider } from '../contexts/LanguageContext';
+import { SearchProvider } from '../contexts/SearchContext';
+import { SearchResultProvider } from '../contexts/SearchResultContext';
 
 const Home = () => {
   return (
     <div className="App">
       <LanguageProvider>
         <SearchProvider>
-          <Header title='Create a new card' search={true} />
+          <Header search={true} />
           <Search />
-          <Container className='container'>
-            <CardList />
-          </Container>
+          <SearchResultProvider>
+            <Container className='container'>
+              <CardList />
+            </Container>
+          </SearchResultProvider>
         </SearchProvider>
       </LanguageProvider>
     </div>

@@ -6,7 +6,6 @@ import * as serviceWorker from './serviceWorker';
 import App from './components/App';
 import Theme from './components/App/theme';
 
-import SidebarState from './components/Sidebar/state';
 import AlertState from './components/Alert/state';
 
 import './styles/index.scss';
@@ -15,9 +14,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Theme>
       <AlertState>
-        <SidebarState>
-          <App />
-        </SidebarState>
+        <App />
       </AlertState>
     </Theme>
   </React.StrictMode>,

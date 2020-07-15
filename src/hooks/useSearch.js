@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import api from '../api';
+// import useSearchResult from './useSearchResult';
 
 const useSearch = ({ from, to }) => {
   const [suggestState, setSuggestState] = useState({
@@ -14,10 +15,54 @@ const useSearch = ({ from, to }) => {
     result: [],
   });
 
+  // const { mountResult } = useSearchResult();
+
   useEffect(() => {
     console.log('suggest', suggestState);
     console.log('search', searchState);
   });
+
+  const mountResult = (result) => result.map(card => ({
+    ...card,
+    loading: false,
+    saved: false,
+    save: save(card.hash),
+    // remove: remove(card.hash),
+  }));
+
+  const save = (hash) => () => {
+    setSearchState(prevState => {
+      const newCards = prevState.result.map(card => {
+        if (card.hash !== hash) {
+          return card;
+        }
+        return { ...card, loading: !card.loading, };
+      });
+
+      return { 
+        ...prevState, 
+        result: newCards,
+      }
+    });
+
+    // auth
+    api.vocabulary.addOne(hash).then(() => {
+      setSearchState(prevState => {
+        const newCards = prevState.result.map(card => {
+          if (card.hash !== hash) {
+            return card;
+          }
+          return { ...card, loading: false, saved: !card.saved, };
+        });
+  
+        return { 
+          ...prevState, 
+          result: newCards,
+        }
+      });
+    });
+
+  };
 
   const changeSuggest = (value) => {
     if (value.length < 2) {
@@ -45,11 +90,12 @@ const useSearch = ({ from, to }) => {
     
     api.search.getResult().then(result => {
       setSearchState(prevState => ({ ...prevState, isLoading: false }));
-      setSearchState(prevState => ({ ...prevState, result }));
+      setSearchState(prevState => ({ ...prevState, result: mountResult(result) }));
     });
   }
 
   return {
+    result: searchState.result,
     suggestState,
     searchState,
     changeValue,

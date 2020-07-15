@@ -3,7 +3,7 @@ import React from 'react';
 import LangDefault from './LangDefault';
 import LangQuick from './LangQuick';
 import LangSwitch from './LangSwitch';
-import { useLanguageContext } from '../../../context/LanguageContext';
+import { useLanguageContext } from '../../../contexts/LanguageContext';
 
 const Languages = (props) => {
   const { 

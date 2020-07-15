@@ -8,9 +8,9 @@ import StarIcon from '@material-ui/icons/Star';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
 
-const Card = ({ saved = false, loading = false, card }) => {
+const Card = ({ card }) => {
   return (
-    <MUICart className={saved ? 'card saved' : 'card'}>
+    <MUICart className={card.saved ? 'card saved' : 'card'} onClick={card.save}>
       <CardActionArea>
         <div className='card-header'>
           <div className='card-header-langs'>
@@ -19,8 +19,8 @@ const Card = ({ saved = false, loading = false, card }) => {
             <div>{ card.lang.to }</div>
           </div>
           <div className='card-header-status'>
-            <div className='card-header-status-text'>{ loading ? 'Loading...' : saved ? 'Saved' : 'Tap to save' }</div>
-            { loading ? <CircularProgress size={12} thickness={6} color='inherit'/> : <StarIcon className='card-header-status-icon'/> }
+            <div className='card-header-status-text'>{ card.loading ? 'Loading...' : card.saved ? 'Saved' : 'Tap to save' }</div>
+            { card.loading ? <CircularProgress size={12} thickness={6} color='inherit'/> : <StarIcon className='card-header-status-icon'/> }
           </div>
         </div>
 

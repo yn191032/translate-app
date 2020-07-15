@@ -9,10 +9,10 @@ const SearchContext = createContext();
 export const SearchProvider = ({ children }) => {
   const { defaults } = useLanguageContext();
 
-  const search = useSearch(defaults);
+  const value = useSearch(defaults);
   
   return (
-    <SearchContext.Provider value={{ ...search }}>
+    <SearchContext.Provider value={value}>
       { children }
     </SearchContext.Provider>
   );

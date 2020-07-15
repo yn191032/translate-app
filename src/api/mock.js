@@ -119,21 +119,6 @@ const user = {
 
 const api = {
 
-  card: {
-    getAll: (userId) => delay(2).then((userId) => ({
-      count: user.cards.length,
-      result: user.cards,
-    })),
-    
-    deleteOne: (cardId, userId) => delay(2).then((cardId, userId) => {
-      user.cards = user.cards.filter(c => c.hash !== cardId);
-    }),
-
-    addOne: (card, userId) => delay(2).then((card, userId) => {
-      user.cards = [ ...user.cards, card ];
-    }),
-  },
-
   user: {
     getData: (userId) => delay(2).then((userId) => ({
       result: {
@@ -178,13 +163,27 @@ const api = {
     }
   },
 
+  vocabulary: {
+    get: (userId) => delay(2).then((userId) => ({
+      count: user.cards.length,
+      result: user.cards,
+    })),
+
+    deleteOne: (cardId, userId) => delay(2).then((cardId, userId) => {
+      user.cards = user.cards.filter(c => c.hash !== cardId);
+    }),
+
+    addOne: (card, userId) => delay(2).then((card, userId) => {
+      user.cards = [ ...user.cards, card ];
+    }),
+  },
+
   search: {
     getResult: (word, from, to) => delay(2).then((word, from, to) => ({
       count: cards.length,
       result: cards,
     })).then(({ result }) => result),
-    // suggest: (word, from, to) => delay(2).then((word, from, to) => ({ result: autocomplete })).then(({ result }) => result),
-    suggest: (phrase, from, to) => axios.get(`https://glosbe.com/ajax/phrasesAutosuggest?from=${from}&dest=${to}&phrase=${phrase}`).then(({ result }) => result),
+    suggest: (word, from, to) => delay(2).then((word, from, to) => ({ result: autocomplete })).then(({ result }) => result),
   },
 
   languages: {

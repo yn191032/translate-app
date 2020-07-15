@@ -1,12 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import SidebarContext from '../Sidebar/context';
+import { useSidebarContext } from '../../contexts/SidebarContext';
 
 const MenuButton = () => {
-  const { toggleMenu } = useContext(SidebarContext);
+  const { toggleMenu } = useSidebarContext();
 
   return (
     <IconButton

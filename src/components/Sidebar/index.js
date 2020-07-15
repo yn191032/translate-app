@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Drawer from '@material-ui/core/Drawer';
@@ -8,10 +8,10 @@ import Chip from '@material-ui/core/Chip';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import StarIcon from '@material-ui/icons/Star';
 
-import SidebarContext from './context';
+import { useSidebarContext } from '../../contexts/SidebarContext';
 
 const Sidebar = () => {
-  const { menu, toggleMenu } = useContext(SidebarContext);
+  const { menu, toggleMenu } = useSidebarContext();
 
   return (
     <Drawer open={menu} onClose={toggleMenu(false)}>
