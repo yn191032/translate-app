@@ -1,39 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 
 import TranslateIcon from '@material-ui/icons/Translate';
 
-import Languages from './Languages';
 import MenuButton from './MenuButton';
+import Topbar from '../Topbar';
 
-const Header = ({ title = '', search = false }) => {
-
+const Header = ({ title = '' }) => {
   return (
-    <AppBar position="static" className='topbar'>
-      <Toolbar variant="dense">
-        <MenuButton />
-        { 
-          search ? <Languages /> : 
-          <>
-            <h6 className='topbar-title'>{ title }</h6>
-            <IconButton
-              edge="end" 
-              size='small'
-              aria-label="account of current user"
-              color="inherit"
-              to='/'
-              component={Link}
-            >
-              <TranslateIcon/>
-            </IconButton>
-          </>
-        }
-      </Toolbar>
-    </AppBar>
+    <Topbar>
+      <MenuButton />
+      <h6 className='topbar-title'>{ title }</h6>
+      <IconButton
+        edge="end" 
+        size='small'
+        color="inherit"
+        to='/'
+        component={Link}
+      >
+        <TranslateIcon/>
+      </IconButton>
+    </Topbar>
   );
 };
 

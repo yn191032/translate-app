@@ -1,0 +1,369 @@
+{
+  "search": [
+    {
+      "id": "1",
+      "saved": true,
+      "lang": {
+        "from": "pl",
+        "to": "ru"
+      },
+      "from": {
+        "word": "speak",
+        "example": "Can we really learn to speak a foreign language like a native?"
+      },
+      "to": {
+        "word": "говорить",
+        "example": "Что бы ты ни говорил, он всё равно этого не сделает."
+      }
+    },
+    {
+      "id": "2",
+      "saved": false,
+      "lang": {
+        "from": "pl",
+        "to": "ru"
+      },
+      "from": {
+        "word": "speak",
+        "example": "I was astounded that she can speak 10 languages."
+      },
+      "to": {
+        "word": "сказать",
+        "example": "Перестань ходить вокруг да около и прямо скажи мне, почему ты так зол."
+      }
+    },
+    {
+      "id": "3",
+      "saved": false,
+      "lang": {
+        "from": "pl",
+        "to": "ru"
+      },
+      "from": {
+        "word": "speak",
+        "example": "Frankly speaking, I don't care for her very much."
+      },
+      "to": {
+        "word": "разговаривать",
+        "example": "Я не думаю, что мне так уж необходимо звучать как носитель языка, я просто хочу уметь свободно разговаривать."
+      }
+    },
+    {
+      "id": "4",
+      "saved": true,
+      "lang": {
+        "from": "pl",
+        "to": "ru"
+      },
+      "from": {
+        "word": "speak",
+        "example": "What a legendary prank that we're never going to speak of again."
+      },
+      "to": {
+        "word": "болтать",
+        "example": "Как много людей колесят весь день, слушая, как их напарник болтает о своем суточном ритме?"
+      }
+    },
+    {
+      "id": "5",
+      "saved": false,
+      "lang": {
+        "from": "pl",
+        "to": "ru"
+      },
+      "from": {
+        "word": "speak",
+        "example": "Could be the machines plotting, but I don't speak computer overlord."
+      },
+      "to": {
+        "word": "беседовать",
+        "example": "Может это заговор машин, но я не общаюсь с компьютерным владыкой."
+      }
+    }
+  ],
+  "suggests": [
+    "CIT",
+    "citadel",
+    "Citadel of Aleppo",
+    "citalopram",
+    "citation",
+    "citation analysis",
+    "citation data",
+    "citation form",
+    "citation index",
+    "citation needed",
+    "cite",
+    "CITES",
+    "citharede",
+    "cither",
+    "cithern",
+    "CITI",
+    "CitiBase project",
+    "CITIC Plaza",
+    "cities",
+    "Cities in Ireland"
+  ],
+  "langs_custom": {
+    "from": "en",
+    "to": "pl"
+  },
+  "langs_quick": [
+    "en",
+    "pl",
+    "by"
+  ],
+  "langs_options": [
+    "by",
+    "en",
+    "pl",
+    "ru",
+    "fr",
+    "bg",
+    "uk"
+  ],
+  "profile": {
+    "langs": {
+      "from": "en",
+      "to": "pl"
+    },
+    "username": "Mehmet Oliver",
+    "email": "mehmetoliver@gmail.com"
+  },
+  "history": [
+    {
+      "id": "1",
+      "phrase": "speak",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "2",
+      "phrase": "search",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "3",
+      "phrase": "container",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "4",
+      "phrase": "components",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "5",
+      "phrase": "core",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "6",
+      "phrase": "history",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "7",
+      "phrase": "items",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "8",
+      "phrase": "import",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "9",
+      "phrase": "from",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "10",
+      "phrase": "default",
+      "date": "12.30.2020",
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    }
+  ],
+  "phrasebook": [
+    {
+      "id": "1",
+      "from": {
+        "word": "speak"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "2",
+      "from": {
+        "word": "search"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "3",
+      "from": {
+        "word": "container"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "4",
+      "from": {
+        "word": "components"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "5",
+      "from": {
+        "word": "core"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "6",
+      "from": {
+        "word": "history"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "7",
+      "from": {
+        "word": "items"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "8",
+      "from": {
+        "word": "import"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "9",
+      "from": {
+        "word": "from"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "10",
+      "from": {
+        "word": "default"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    },
+    {
+      "id": "11",
+      "from": {
+        "word": "cards"
+      },
+      "to": {
+        "word": "speak"
+      },
+      "langs": {
+        "from": "en",
+        "to": "ru"
+      }
+    }
+  ]
+}

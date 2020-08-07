@@ -8,10 +8,10 @@ import Chip from '@material-ui/core/Chip';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import StarIcon from '@material-ui/icons/Star';
 
-import { useSidebarContext } from '../../contexts/SidebarContext';
+import { useSidebar } from './context';
 
 const Sidebar = () => {
-  const { menu, toggleMenu } = useSidebarContext();
+  const { menu, toggleMenu } = useSidebar();
 
   return (
     <Drawer open={menu} onClose={toggleMenu(false)}>

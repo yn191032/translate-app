@@ -1,13 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import Snackbar from '@material-ui/core/Snackbar';
 import IconButton from '@material-ui/core/IconButton';
 
 import CloseIcon from '@material-ui/icons/Close';
-import AlertContext from './context';
+
+import { useAlert } from './context';
 
 const Message = () => {
-  const { text, open, hide } = useContext(AlertContext);
+  const { text, open, hide } = useAlert();
 
   return (
     <Snackbar
