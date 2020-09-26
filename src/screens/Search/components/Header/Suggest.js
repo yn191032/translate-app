@@ -4,11 +4,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import useSuggests from './hooks/useSuggests';
-
-const Suggest = ({ from, to, phrase, onClick }) => {
-  const { suggests } = useSuggests(from, to, phrase);
-
+const Suggest = ({ suggests, onClick }) => {
   console.log('<Suggest />', suggests);
 
   return suggests ? (

@@ -1,20 +1,22 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import Topbar from '../Topbar';
-// import BackButton from './BackButton';
+import Topbar from '../../../../components/Topbar';
+import BackButton from './BackButton';
+import SearchForm from './SearchForm';
 import Suggest from './Suggest';
 import Langs from './Langs';
-import SearchForm from './SearchForm';
 
-import useLangsOptions from './hooks/useLangsOptions';
-import useLangs from './hooks/useLangs';
+import { useLangsOptions } from '../../hooks/useLangsOptions';
+import { useSuggests } from '../../hooks/useSuggests';
+import { useLangs } from '../../hooks/useLangs';
 
-const SearchHeader = () => {
+export const Header = () => {
   const history = useHistory();
   const [phrase, setPhrase] = useState('');
   const { from, to, setFrom, setTo } = useLangs();
-  const options = useLangsOptions();
+  const { options } = useLangsOptions();
+  const { suggests } = useSuggests(from, to, phrase);
 
   const submitPhrase = (value) => (e) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ const SearchHeader = () => {
   return (
     <>
       <Topbar>
-        {/* <BackButton /> */}
+        <BackButton />
         <Langs 
           from={from} 
           to={to} 
@@ -40,13 +42,9 @@ const SearchHeader = () => {
         onSubmit={submitPhrase(phrase)}
       />
       <Suggest 
-        from={from} 
-        to={to} 
-        phrase={phrase} 
+        suggests={suggests} 
         onClick={submitPhrase} 
       />
     </>
   );
 };
-
-export default SearchHeader;

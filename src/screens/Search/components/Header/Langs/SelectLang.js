@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { IconButton, Menu, MenuItem } from '@material-ui/core';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 
-import { LANGS } from '../../../constants';
+import { langs } from '../../../constants';
 
 const SelectLang = ({ value, onChange, options }) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -30,7 +30,7 @@ const SelectLang = ({ value, onChange, options }) => {
         color="inherit"
         onClick={handleClickListItem}
       >
-        {LANGS[value]}
+        {langs[value]}
         {options ? <KeyboardArrowDownIcon fontSize='small'/> : null}
       </IconButton>
 
@@ -46,7 +46,7 @@ const SelectLang = ({ value, onChange, options }) => {
             key={option}
             onClick={handleMenuItemClick(option)}
           >
-            {LANGS[option]}
+            {langs[option]}
           </MenuItem>
         ))}
       </Menu> : null}

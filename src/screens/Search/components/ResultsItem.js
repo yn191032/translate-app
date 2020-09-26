@@ -8,13 +8,8 @@ import StarIcon from '@material-ui/icons/Star';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import SubdirectoryArrowRightIcon from '@material-ui/icons/SubdirectoryArrowRight';
 
-// import useFetch from '../../hooks/useFetch';
-// import api from '../../api';
 
 const ResultsListItem = ({ item }) => {
-  // const [toSave, setToSave] = useState(0);
-  // const [data, loading, load] = useFetch(api.search.save, toSave);
-
   const loading = false;
   
   const save = () => {

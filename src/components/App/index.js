@@ -5,9 +5,8 @@ import Sidebar from '../Sidebar';
 import BottomNav from '../BottomNav';
 import Alert from '../Alert';
 
-import Search from '../../screens/Search';
-import History from '../../screens/History';
-import Phrasebook from '../../screens/Phrasebook';
+import { Search, History } from '../../screens/Search';
+import { Phrasebook } from '../../screens/Phrasebook';
 import Signup from '../../screens/Signup';
 import Login from '../../screens/Login';
 import Profile from '../../screens/Profile';
@@ -16,7 +15,6 @@ import { SidebarProvider } from '../Sidebar/context';
 import { AlertProvider } from '../Alert/context';
 
 import BasicRoute from '../../layouts/BasicRoute';
-import WithSearchRoute from '../../layouts/WithSearchRoute';
 
 const App = () => {
   return (
@@ -25,11 +23,14 @@ const App = () => {
         <BrowserRouter>
 
           <Switch>
+
             <Route exact path='/'>
               <Redirect to='/history' />
             </Route>
-            <WithSearchRoute exact path='/history' component={History}/>
-            <WithSearchRoute exact path='/search/:from/:to/:phrase' component={Search}/>
+
+            <Route exact path='/history' component={History}/>
+            <Route exact path='/search/:from/:to/:phrase' component={Search}/>
+
             <BasicRoute exact path='/phrasebook' title='Phrasebook' component={Phrasebook}/>
             <BasicRoute exact path='/profile' title='Profile' component={Profile}/>
             <BasicRoute exact path='/signup' title='Sign up' component={Signup}/>
