@@ -1,8 +1,0 @@
-{
-  "/api/v1/*": "/$1",
-  "/suggests/:from/:to/:phrase": "/suggests",
-  "/search/:from/:to/:phrase": "/search",
-  "/langs/options": "/langs_options",
-  "/langs/quick": "/langs_quick",
-  "/langs/custom": "/langs_custom"
-}
